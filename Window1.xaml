@@ -1,0 +1,169 @@
+﻿<Window x:Class="WpfFinalProject.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfFinalProject" xmlns:viewmodel="clr-namespace:WpfFinalProject.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CarsViewModel}"
+        mc:Ignorable="d"
+        Title="Window1" Height="600" Width="1000">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="MyButtonStyle">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource MyButtonStyle}">
+            <Setter Property="Margin" Value="2"></Setter>
+        </Style>
+        <Style TargetType="TextBox"> 
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2"></ColumnDefinition>
+            <ColumnDefinition Width="40*"></ColumnDefinition>
+            <ColumnDefinition Width="2"></ColumnDefinition>
+            <ColumnDefinition Width="100*"></ColumnDefinition>
+            <ColumnDefinition Width="2"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="2"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Grid.Column="0" Background="Gray"></Label>
+        <Label Grid.Row="1" Grid.Column="2" Background="Gray"></Label>
+        <Label Grid.Row="1" Grid.Column="4" Background="Gray"></Label>
+        <Label Grid.Row="0" Grid.Column="1" Background="Gray"></Label>
+        <Label Grid.Row="3" Grid.Column="1" Background="Gray"></Label>
+        <Label Grid.Row="0" Grid.Column="3" Background="Gray"></Label>
+        <Label Grid.Row="3" Grid.Column="3" Background="Gray"></Label>
+         
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="21*"></RowDefinition>
+                <RowDefinition Height="256*"></RowDefinition>
+                <RowDefinition Height="143*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Margin="0,0,-0.2,143.8" Grid.RowSpan="2">
+                <Menu >
+                    <MenuItem Header="Tools">
+                        <MenuItem Header="Style">
+                            <MenuItem Header="Dark Style"></MenuItem>
+                            <MenuItem Header="Lite Style"></MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Language">
+                            <MenuItem Header="Ukraine"></MenuItem>
+                            <MenuItem Header="England"></MenuItem>
+                        </MenuItem>
+                    </MenuItem>  
+                </Menu> 
+            </StackPanel>
+
+            <Grid Grid.Row="1" Margin="0,0.2,-0.2,0.8">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0">Add new car</Button>
+                <Button Grid.Row="1">Remove car</Button>
+                <Button Grid.Row="2">Save</Button>
+                <Button Grid.Row="3">Save as..</Button>
+                <Button Grid.Row="4">Load from memory</Button>
+                <Button Grid.Row="5">Load from file</Button>
+            </Grid>
+            <Grid Grid.Row="2" Margin="0,3.2,-0.2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"></ColumnDefinition>
+                    <ColumnDefinition Width="200*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">Brand</Label>
+                <Label Grid.Row="1" Grid.Column="0">Model</Label>
+                <Label Grid.Row="2" Grid.Column="0">Volume</Label>
+                <Label Grid.Row="3" Grid.Column="0">Pover</Label>
+                <Label Grid.Row="4" Grid.Column="0">Release date</Label>
+                <Label Grid.Row="5" Grid.Column="0">Image</Label>
+                <TextBox Grid.Row="0" Grid.Column="1"></TextBox> 
+                <TextBox Grid.Row="1" Grid.Column="1"></TextBox> 
+                <TextBox Grid.Row="2" Grid.Column="1"></TextBox> 
+                <TextBox Grid.Row="3" Grid.Column="1"></TextBox> 
+                <TextBox Grid.Row="4" Grid.Column="1"></TextBox> 
+                <TextBox Grid.Row="5" Grid.Column="1"></TextBox> 
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="237*"></ColumnDefinition>
+                <ColumnDefinition Width="2"></ColumnDefinition>
+                <ColumnDefinition Width="469*"></ColumnDefinition> 
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*" ></RowDefinition>
+                <RowDefinition Height="2" ></RowDefinition>
+                <RowDefinition Height="100*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Grid.Column="0" Background="Gray"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Background="Gray"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Background="Gray"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Background="Gray"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Background="Gray"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Background="Gray"></Label>
+            <ListBox Grid.Row="0" Grid.Column="0"
+                     FontWeight="Bold"
+                     ItemsSource="{Binding Cars}"
+                     SelectedItem="{Binding SelectedCar}"></ListBox>
+            <ListBox Grid.Row="2" Grid.Column="0"
+                     FontWeight="Bold"
+                     ItemsSource="{Binding Cars}"
+                     SelectedItem="{Binding SelectedCar}"></ListBox>
+            <Image Grid.Column="2" Grid.Row="0"  Source="{Binding SelectedCar.ImageUri}"></Image>
+            <Grid Grid.Row="3" Grid.Column="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"></ColumnDefinition>
+                    <ColumnDefinition Width="200*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">Brand</Label>
+                <Label Grid.Row="1" Grid.Column="0">Model</Label>
+                <Label Grid.Row="2" Grid.Column="0">Volume</Label>
+                <Label Grid.Row="3" Grid.Column="0">Pover</Label>
+                <Label Grid.Row="4" Grid.Column="0">Release date</Label>
+                <Label Grid.Row="5" Grid.Column="0">Image</Label>
+                <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1"></TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1"></TextBox>
+                <TextBox Grid.Row="5" Grid.Column="1"></TextBox> 
+            </Grid>
+            
+        </Grid>
+
+
+
+    </Grid>
+</Window>
